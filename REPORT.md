@@ -30,3 +30,7 @@ Tài khoản AWS mới bị giới hạn **Free plan** và **quota GPU = 0 vCPU*
 Với LightGBM trên CPU `r5.2xlarge`, toàn bộ pipeline (load + train + inference) hoàn thành trong **~5 giây** — training rất nhanh nhờ gradient boosting tối ưu cho dữ liệu dạng bảng. AUC-ROC đạt **0.73–0.86** tùy lần chạy (do early stopping chưa bật, kết quả có biến động nhẹ giữa các lần). Inference cực nhanh: **< 1 ms/row** và **~1.8 ms cho 1000 rows**, phù hợp cho bài toán fraud detection cần latency thấp.
 
 So với phương án GPU (vLLM + Gemma), CPU + LightGBM không cần GPU quota, triển khai đơn giản hơn, và đủ mạnh cho bài toán ML cổ điển trên structured data. Đổi lại, GPU vượt trội hơn cho LLM inference quy mô lớn — nhưng với tài khoản mới, phương án CPU là lựa chọn khả thi và được chấm tương đương.
+
+## Ghi chú về AWS Billing
+
+Screenshot Cost Explorer (`Screenshots/03_Screenshot_billing.png`) chụp sau ≥ 1 giờ triển khai vẫn hiển thị **$0.00** cho tất cả dịch vụ — đây là hiện tượng **billing delay** phổ biến trên tài khoản AWS mới/Free plan. Chi phí thực tế ước tính theo lab: **~$0.57/giờ** (r5.2xlarge ~$0.50 + NAT Gateway ~$0.05 + ALB + bastion).

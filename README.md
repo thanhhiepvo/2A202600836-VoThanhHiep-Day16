@@ -158,7 +158,7 @@ Chi tiết đầy đủ: xem `benchmark_result.json` và `REPORT.md`.
 |---|---|---|
 | 1 | Screenshot terminal `python3 benchmark.py` | `Screenshots/01_Screenshot_terminal.png` |
 | 2 | File kết quả JSON | `benchmark_result.json` |
-| 3 | Screenshot AWS Billing | `Screenshots/03_Screenshot_billing.png` |
+| 3 | Screenshot AWS Billing (Cost Explorer) | `Screenshots/03_Screenshot_billing.png` |
 | 4 | Mã Terraform (`r5.2xlarge`) | `terraform/main.tf` |
 | 5 | Báo cáo ngắn | `REPORT.md` |
 
