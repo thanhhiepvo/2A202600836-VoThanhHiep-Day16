@@ -1,6 +1,7 @@
 # Báo cáo ngắn — Phương án CPU + LightGBM (Phần 7)
 
-**Sinh viên:** Võ Thành Hiệp  
+**Họ tên:** Võ Thanh Hiệp  
+**ID:** 2A202600836
 **Lab:** Day 16 — Cloud AI Environment Setup  
 **Instance:** `r5.2xlarge` (Amazon Linux 2023, us-east-1)  
 **Dataset:** Credit Card Fraud Detection (284,807 giao dịch)
